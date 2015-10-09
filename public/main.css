@@ -1,0 +1,231 @@
+/*----------------- HEADER NAV BAR AND LOGO ---------------------*/
+.page_header {
+    background-color: #9494DC;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: .5%;
+    border-bottom:solid;
+    padding-top: 200px;
+}
+
+.page_header h1 {
+    font-size: 53px;
+    margin-top: -84px;
+    /* margin-left: 106px; */
+    /* margin-bottom: 3px; */
+}
+
+.page_header h3{
+    padding-bottom: 1%;
+    font-size: 16px;
+    font-family: "Rockwell Extra","Rockwell bold",monospace;
+    margin-top: -19px;
+    /* margin-left: 110px; */
+    /* margin-bottom: 0px; */
+}
+
+.nav_bar{
+    background-color: #9494DC;
+    border-top: none;
+    border-radius: 0px 0px 0px 30px;
+    padding-bottom: 10px;
+    padding-right: 1px;
+    border-left: solid white;
+    border-bottom: solid white;
+    padding-top: 6px;
+    margin-top: -3px;
+    margin-bottom: 20px;
+}
+
+.page_header img {
+    width: 290px;
+    /* padding-top: 12%; */
+}
+
+.link_info{
+    font-size: 20px;
+    font-family: "Rockwell Extra","Rockwell Bold",monospace;
+}
+
+.links {
+    margin-right: 2%
+}
+/*-----------------CONTENT AND MAIN INPUT---------------------*/
+.content{
+    background-color: lightgrey;
+    border-radius:0px 0px 10px 10px;
+    margin-bottom: 1%;
+}
+
+.mainInput input{
+    height: auto;
+    margin-top: 2%;
+    height: auto;
+    margin-top: 5%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.allDemButtons {
+    margin-left:4%;
+}
+
+.mainInput h4 {
+    /* margin: auto; */
+    /* text-align: center; */
+    margin-top: 5%;
+}
+/*-----------------ABOUT PAGE---------------------*/
+.about {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 16px;
+    border: solid thin;
+}
+
+
+.icons img{
+    height: 50px;
+    margin-bottom: -10px;
+}
+
+.icons{
+    text-align: center;
+
+}
+
+.about h1{
+    text-align: left;
+}
+
+.section legend {
+    margin-bottom: -17px;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+    border: solid thin;
+    border-bottom: white;
+    position: relative;
+    z-index: 9;
+}
+
+.about p{
+  
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about h5 {
+    text-align: center;
+}
+/*-----------------DONATE PAGE---------------------*/
+.donation_section {
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.donate{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 16px;
+    text-align: center;
+    padding-top: 26px;
+    padding-bottom: 20px;
+        border: solid thin;
+}
+
+
+.close_donate {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+/*-----------------FOOTER---------------------*/
+
+
+.footer {
+    padding-top: 80px;
+}
+
+.selected{
+     background-color: #5cb85c;
+  border-color: #4cae4c;
+  color:white;
+}
+
+.sweet_buttons:hover {
+    background-color: #4cae4c;
+    color:white;
+}
+
+.sweet_buttons:active:hover{
+    background-color: #2D5A2D;
+    color:white;
+}
+
+.sweet_buttons:focus{
+     background-color: #4cae4c;
+      color:white
+}
+.sweet_buttons{
+    margin:.5px;
+
+}
+
+.btn-group h4 {
+        margin-top: 15px;
+}
+
+.nav_bar button:hover{
+    background-color:#53538F;
+    color:white;
+}
+
+.nav_bar button:active:hover {
+ background-color:#23234C;
+    color:white;
+}
+
+.nav_bar button:active{
+    background-color:#53538F;
+    color:white;
+}
+
+
+.nav_bar button:focus{
+    background-color:#53538F;
+    color:white;
+}
+
+.selected_nav_button {
+     background-color:#53538F;
+     color:white;
+}
+
+
+
+
+.error p {
+        text-align: center;
+        margin:0px;
+            padding: 30px;
+}
+
+.gradetype {
+   /* text-align:center;*/
+    margin-top:10px
+}
+
+.resulttype {
+    margin-left:15px
+}
+
+.modal-body h4{
+    padding-left: 30px;
+    background-color: yellow;
+}

@@ -1,0 +1,17 @@
+YDS
+(USA)	British	French	UIAA	Saxon	Ewbank
+(AUS, NZL)	Ewbank
+South Africa	Nordic	Brazil
+Tech	Adj	Finnish	SWE/NOR
+
+
+
+Is it better to have an array of many objects or an
+array with one object each property being a single long array
+
+
+
+Include in the header a math random that will randomly select an image from the array to display to the user.
+
+
+<button type="button" class="close comment_closer" data-dismiss="modal" ng-click = "closeAddComment()">&times;</button>
