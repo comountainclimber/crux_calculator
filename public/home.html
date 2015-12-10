@@ -2,226 +2,225 @@
 <html ng-app="climbingCalculator">
 <head>
 	<title>Crux Calculator</title>
+<link rel="icon" href="img/SMC-Carabiner.png" type="image/png" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="normalize.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<link rel="icon" href="img/SMC-Carabiner.png" type="image/png" sizes="16x16">
-<body ng-controller="mainController" ng-cloak>
 
-<div class="container">
-	<div class="row">
-		<div class = "col-sm-2">
-		</div>
-	  	<div class = "col-sm-8 page_header">
-	  		<img src="img/range-clipart-mountain-hi.png">
-	  		<h1> Crux Calculator </h1>
-	  		<h3>the global climbing grade converter</h3>
-	  	</div>
-		<div class = "col-sm-2">
-		</div>
-	</div>
-
-	<div class="row">
-		<div class = "col-sm-2">
-		</div>
-	  	<div class = "col-sm-8 content">
-			<div class="input">
-				<div class="row">
-					<div class = "col-sm-3">
-					</div>
-					<div class = "col-sm-4">
-					</div>
-	   				<div class = "col-sm-5 text-center nav_bar">
-	   					<button type="button" class="btn btn-default btn-md links" ng-repeat="object in navbarButtons" ng-class="{selected_nav_button:object.pressed}" ng-click = "clickNavBarButton($index)" >{{object.button}}</button>
-	   					
-	   				</div>
-
-
-
-	<div class = "section" ng-show="showAboutLink">
+<body ng-cloak ng-controller="mainController">
+	<div class="container-fluid">
 		<div class="row">
-			<div class = "col-sm-4">
+			<div class = "col-sm-2">
 			</div>
-			<div class = "col-sm-4 text-center">
-				<fieldset>
-					<legend>ABOUT 
-					</legend>	
-				</fieldset>
+		  	<div class = "col-sm-8 page_header">
+		  		<img src="img/range-clipart-mountain-hi.png">
+		  		<h1> Crux Calculator </h1>
+		  		<h3>the global climbing grade converter</h3>
+		  	</div>
+			<div class = "col-sm-2">
 			</div>
-	   		<div class = "col-sm-4">
-	   		</div>
 		</div>
 
 		<div class="row">
 			<div class = "col-sm-2">
 			</div>
-			<div class = "col-sm-8">
-				<div class = "about" ng-show = "showAboutLink">
-					<h5>Rock Climbing and Difficulty Grading:</h5>
-					<p>In North America both sport and traditional rock climbs are graded using the YDS (Yosemite Decimal System). This climbing grade system starts at 5.0 (similar to climbing a steep ladder) and progresses in difficulty all the way up to 5.15 (a smooth overhanging cliff). The grade of a rock route is based on the crux, the most difficult move. Usually the first climber to complete a route assigns a grade which may then change as more people make the ascent. <br><br> 
-					<h5>Crux Calculator:</h5>
-					<p>This project gives you the rough equivalent of any climbing grade in all of the major grading systems.
-
-					This web app was designed and developed by Maxwell Lasky and is currently still in beta testing.<br><br>
-
-					Crux Calculator utilizes the following technologies:<br>
-						<div class = "icons">
-							<img src="img/angularjs.png">
-							<img src="img/html5.png">
-							<img src="img/css3.png">
-							<img src="img/boostrap.png">
-						</p>
+		  	<div class = "col-sm-8 content">
+				<div class="input">
+					<div class="row">
+						<div class = "col-sm-3">
 						</div>
-				</div>
-			</div>
-	   		<div class = "col-sm-2">
-	   		</div>
-		</div>
-	</div>
+						<div class = "col-sm-4">
+						</div>
+		   				<div class = "col-sm-5 text-center nav_bar">
+		   					<button type="button" class="btn btn-default btn-md links" ng-repeat="object in navbarButtons" ng-class="{selected_nav_button:object.pressed}" ng-click = "clickNavBarButton($index)">{{object.button}}</button>
+		   				</div>
+		   		
 
-	<div class = "section" ng-show="showDonateSection" >
-		<div class="row">
-			<div class = "col-sm-4">
-			</div>
-			<div class = "col-sm-4 text-center">
-				<fieldset>
-					<legend>DONATE
-					</legend>	
-				</fieldset>
-			</div>
-	   		<div class = "col-sm-4">
-	   		</div>
-		</div>
-
-		<div class="row">
-			<div class = "col-sm-2">
-			</div>
-			<div class = "col-sm-8">
-					
-					<div class = "donate" >
-					<p> Help keep Crux Calculator spam free! We incur monthly costs for maintenance and hosting and even the smallest donation helps significantly! </p>
-												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-							<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-							">
-							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-							</form>
-					</div>
-					
-					</div>
-			</div>
-	   		<div class = "col-sm-2">
-	   		</div>
-		</div>
-
-	
-	<div class ="row">
-	<div class = "col-sm-1"> </div>
-	<div class = "col-sm-10"> 
-	<h4>Please select which grade type you will be inputting:</h4>
-	</div>
-	<div class = "col-sm-1"> 
-	</div>
-	</div>
-	
-
-		<div class = "mainInput">
+		<div class = "section" ng-show="showAboutLink">
 			<div class="row">
-				<div class = "col-sm-0">
+				<div class = "col-sm-4">
 				</div>
-				<div class = "col-lg-12 text-center">
-					<div class="btn-group" role="group" aria-label="...">
-						<div class="allDemButtons">
-					  	<button type="button" class="btn btn-default sweet_buttons" ng-repeat="object in arrayOfButtons" ng-class="{selected:object.selected}" ng-click="clickButton($index)">{{object.buttonText}}</button>
-					  	</div>
-					</div>
+				<div class = "col-sm-4 text-center">
+					<fieldset>
+						<legend>ABOUT 
+						</legend>	
+					</fieldset>
 				</div>
-	   			<div class = "col-sm-0"></div>
-				</div>
+		   		<div class = "col-sm-4">
+		   		</div>
 			</div>
 
-		<div class = "mainInput">
 			<div class="row">
 				<div class = "col-sm-2">
 				</div>
-				<div class = "col-sm-8 text-center">
-					<form class="inputForm" ng-submit="submit()">
-						<input class="form-control" type="text" ng-model="userInput.grade" rows="1" placeholder="enter grade here (be as specific as possible)..." autofocus></input>
-				</div>
-	   			<div class = "col-sm-2"></div>
-				</div>
-			</div>
+				<div class = "col-sm-8 content">
+					<div class = "about" ng-show = "showAboutLink">
+						<h5>Rock Climbing and Difficulty Grading:</h5>
+						<p>In North America both sport and traditional rock climbs are graded using the YDS (Yosemite Decimal System). This climbing grade system starts at 5.0 (similar to climbing a steep ladder) and progresses in difficulty all the way up to 5.15 (a smooth overhanging cliff). The grade of a rock route is based on the crux, the most difficult move. Usually the first climber to complete a route assigns a grade which may then change as more people make the ascent. <br><br> 
+						<h5>Crux Calculator:</h5>
+						<p>This project gives you the rough equivalent of any climbing grade in all of the major grading systems.
 
+						This web app was designed and developed by Maxwell Lasky and is currently still in beta testing.<br><br>
 
-
-			<div class="row">
-				<div class = "col-sm-5">
-				</div>
-				<div class = "col-sm-2 text-center">
-					<button type="submit" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">Submit</button>
-				</div>
-	   			<div class = "col-sm-5"></div>
-				</div>
-			</div>
-				</form>
-
-			<div class="row">
-				<div class = "col-sm-5">
-					<div class ="footer">
-					&copy; 2015, designed by <a href="mailto:mlasky46@gmail.com">Maxwell Lasky</a> 
+						Crux Calculator utilizes the following technologies:<br>
+							<div class = "icons">
+								<img src="img/angularjs.png">
+								<img src="img/html5.png">
+								<img src="img/css3.png">
+								<img src="img/boostrap.png">
+							</p>
+							</div>
 					</div>
 				</div>
-				<div class = "col-sm-4 text-center">
-					
-				</div>
-	   			<div class = "col-sm-4"></div>
-				</div>
+		   		<div class = "col-sm-2">
+		   		</div>
 			</div>
 		</div>
 
-	<div id="myModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h2 class="modal-title">Equivalent climbing grades:</h2>
-	      </div>
-	      <div class = "error" ng-show="revealError">
-	      	<p>{{errorMessage}}</p>
-	      </div>
-	       <div class = "error" ng-show="revealError2">
-	      	<p>{{otherErrorMessage}}</p>
-	      </div>
-	      <div class="modal-body" ng-show="showstandardResult">
-	    
-	        <h4> Free Climbing Grades: </h4>
-	        <div class = "gradetype"><b>Yosemite Decimal System (YDS):</b></div><div class="resulttype"> {{results.yds}} </div>
-	        <div class = "gradetype"><b>British Techinical Grade:</b></div><div class="resulttype">  {{results.britishTech}} </div>
-	        <div class = "gradetype"><b>French Grade:</b></div> <div class="resulttype">{{results.french}} </div>
-	        <div class = "gradetype"><b>UIAA:</b></div><div class="resulttype"> {{results.uiaa}}</div>
-	        <div class = "gradetype"><b>Saxon: </b></div><div class="resulttype">{{results.saxon}}</div>
-	        <div class = "gradetype"><b>Ewbank: </b></div><div class="resulttype">{{results.ewBank}}</div>
-	        <div class = "gradetype"><b>Ewbank South Africa</b> </div><div class="resulttype">{{results.ewBankSA}}</div>
-	        <div class = "gradetype"> <b>Finnish: </b></div><div class="resulttype">{{results.finnish}}</div>
-	        <div class = "gradetype"><b>Scandanavian(Sweden/Norway): </b> </div><div class="resulttype">{{results.sweNor}}</div>
-	       	<div class = "gradetype"> <b>Brazil: </b></div><div class="resulttype">{{results.brazil}}</div>
+		<div class = "section" ng-show="showDonateSection" >
+			<div class="row">
+				<div class = "col-sm-4">
+				</div>
+				<div class = "col-sm-4 text-center">
+					<fieldset>
+						<legend>DONATE
+						</legend>	
+					</fieldset>
+				</div>
+		   		<div class = "col-sm-4">
+		   		</div>
+			</div>
 
-	        <h4> Bouldering: </h4>
-	        <div class = "gradetype"><b>Hueco:</b></div> <div class="resulttype">{{results.hueco}}</div>
-	        <div class = "gradetype"><b>UK Bouldering:</b> </div><div class="resulttype">{{results.ukBouldering}}</b></div>
-	        <div class = "gradetype"><b>Fontainebleau (French):</b> <div class="resulttype">{{results.font}}</div>
-	        
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
-	      </div>
-	    </div>
-	  </div>
+			<div class="row">
+				<div class = "col-sm-2">
+				</div>
+				<div class = "col-sm-8">
+						
+						<div class = "donate" >
+						<p> Help keep Crux Calculator spam free! We incur monthly costs for maintenance and hosting and even the smallest donation helps significantly! </p>
+													<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+								">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+						</div>
+						
+						</div>
+				</div>
+		   		<div class = "col-sm-2">
+		   		</div>
+			</div>
+
+		
+		<div class ="row">
+			<div class = "col-sm-2"> 
+			</div>
+			<div class = "col-sm-8 text-center"> 
+			<h4>Please select which grade type you will be inputting:</h4>
+			</div>
+			<div class = "col-sm-2"> 
+			</div>
+		</div>
+		
+
+			<div class = "mainInput">
+				<div class="row">
+					<div class = "col-sm-0">
+					</div>
+					<div class = "col-lg-12 text-center">
+						<div class="btn-group" role="group" aria-label="...">
+							<div class="allDemButtons">
+						  	<button type="button" class="btn btn-default sweet_buttons" ng-repeat="object in arrayOfButtons" ng-class="{selected:object.selected}" ng-click="clickButton($index)">{{object.buttonText}}</button>
+						  	</div>
+						</div>
+					</div>
+		   			<div class = "col-sm-0"></div>
+					</div>
+				</div>
+
+			<div class = "mainInput">
+				<div class="row">
+					<div class = "col-sm-2">
+					</div>
+					<div class = "col-sm-8 text-center">
+						<form class="inputForm" ng-submit="submit()">
+							<input class="form-control" type="text" ng-model="userInput.grade" rows="1" placeholder="enter grade here (be as specific as possible)..." autofocus></input>
+					</div>
+		   			<div class = "col-sm-2"></div>
+					</div>
+				</div>
+
+
+
+				<div class="row">
+					<div class = "col-sm-5">
+					</div>
+					<div class = "col-sm-2 text-center">
+						<button type="submit" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">Submit</button>
+					</div>
+		   			<div class = "col-sm-5"></div>
+					</div>
+				</div>
+					</form>
+
+				<div class="row">
+					<div class = "col-sm-5">
+						<div class ="footer">
+						&copy; 2015, designed by <a href="mailto:mlasky46@gmail.com">Maxwell Lasky</a> 
+						</div>
+					</div>
+					<div class = "col-sm-4 text-center">
+						
+					</div>
+		   			<div class = "col-sm-4"></div>
+					</div>
+				</div>
+			</div>
+
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h2 class="modal-title">Equivalent climbing grades:</h2>
+		      </div>
+		      <div class = "error" ng-show="revealError">
+		      	<p>{{errorMessage}}</p>
+		      </div>
+		       <div class = "error" ng-show="revealError2">
+		      	<p>{{otherErrorMessage}}</p>
+		      </div>
+		      <div class="modal-body" ng-show="showstandardResult">
+		    
+		        <h4> Free Climbing Grades: </h4>
+		        <div class = "gradetype"><b>Yosemite Decimal System (YDS):</b></div><div class="resulttype"> {{results.yds}} </div>
+		        <div class = "gradetype"><b>British Techinical Grade:</b></div><div class="resulttype">  {{results.britishTech}} </div>
+		        <div class = "gradetype"><b>French Grade:</b></div> <div class="resulttype">{{results.french}} </div>
+		        <div class = "gradetype"><b>UIAA:</b></div><div class="resulttype"> {{results.uiaa}}</div>
+		        <div class = "gradetype"><b>Saxon: </b></div><div class="resulttype">{{results.saxon}}</div>
+		        <div class = "gradetype"><b>Ewbank: </b></div><div class="resulttype">{{results.ewBank}}</div>
+		        <div class = "gradetype"><b>Ewbank South Africa</b> </div><div class="resulttype">{{results.ewBankSA}}</div>
+		        <div class = "gradetype"> <b>Finnish: </b></div><div class="resulttype">{{results.finnish}}</div>
+		        <div class = "gradetype"><b>Scandanavian(Sweden/Norway): </b> </div><div class="resulttype">{{results.sweNor}}</div>
+		       	<div class = "gradetype"> <b>Brazil: </b></div><div class="resulttype">{{results.brazil}}</div>
+
+		        <h4> Bouldering: </h4>
+		        <div class = "gradetype"><b>Hueco:</b></div> <div class="resulttype">{{results.hueco}}</div>
+		        <div class = "gradetype"><b>UK Bouldering:</b> </div><div class="resulttype">{{results.ukBouldering}}</b></div>
+		        <div class = "gradetype"><b>Fontainebleau (French):</b> <div class="resulttype">{{results.font}}</div>
+		        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	</div>
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>

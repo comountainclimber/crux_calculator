@@ -61,9 +61,12 @@
     height: auto;
     margin-top: 2%;
     height: auto;
-    margin-top: 5%;
     font-size: 15px;
     text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    width: 90%;
+}
 }
 
 .allDemButtons {
@@ -207,9 +210,6 @@
      color:white;
 }
 
-
-
-
 .error p {
         text-align: center;
         margin:0px;
@@ -228,4 +228,12 @@
 .modal-body h4{
     padding-left: 30px;
     background-color: yellow;
+}
+
+@media (max-width: 768px) {
+    .nav_bar{
+        border-left:none;
+        border-radius: 0px 0px 0px 0px;
+       
+    }
 }
